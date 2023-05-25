@@ -1,4 +1,4 @@
-import '../styles/App.css'; 
+import '../styles/App.css';
 import React, { useState } from 'react';
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
 
   const editTask = (index) => {
     setEditIndex(index);
+    setTaskInput(tasks[index]);
   };
 
   const saveTask = (index) => {
@@ -38,8 +39,7 @@ function App() {
   return (
     <div className="App">
       <div className="add_tasks_section">
-        <input
-          type="text"
+        <textarea
           value={taskInput}
           onChange={handleTaskInputChange}
           placeholder="Add a new task"
@@ -53,11 +53,10 @@ function App() {
             <li key={index} className="task">
               {editIndex === index ? (
                 <div>
-                  <input
-                    type="text"
+                  <textarea
                     value={taskInput}
                     onChange={handleTaskInputChange}
-                  />
+                  ></textarea>
                   <button className="save" onClick={() => saveTask(index)}>
                     Save
                   </button>
@@ -82,3 +81,4 @@ function App() {
 }
 
 export default App;
+

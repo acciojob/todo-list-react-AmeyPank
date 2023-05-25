@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [taskInput, setTaskInput] = useState('');
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([0]);
   const [editIndex, setEditIndex] = useState(-1);
 
   const handleTaskInputChange = (event) => {
@@ -38,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>To Do List</h1>
       <div className="add_tasks_section">
         <textarea
           value={taskInput}

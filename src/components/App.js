@@ -40,7 +40,7 @@ function App() {
     <div className="App">
       
       <div className="add_tasks_section">
-        <h1>To Do List</h1>
+        <h3>To Do List</h3>
         <textarea
           value={taskInput}
           onChange={handleTaskInputChange}

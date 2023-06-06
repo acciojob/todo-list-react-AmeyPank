@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [taskInput, setTaskInput] = useState('');
-  const [tasks, setTasks] = useState([0]);
+  const [tasks, setTasks] = useState([]);
   const [editIndex, setEditIndex] = useState(-1);
 
   const handleTaskInputChange = (event) => {
